@@ -57,7 +57,8 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - run: ls -la
+      - run: cat package-lock.json
+      - run: ls -la ./public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
