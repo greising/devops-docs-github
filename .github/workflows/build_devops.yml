@@ -18,7 +18,21 @@ jobs:
         with:
           submodules: "recursive"  # Fetch Hugo themes (true OR recursive)
           #fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
+      
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          
+      - name: Cache node dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-
+      
+      - run: npm ci
+  
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
