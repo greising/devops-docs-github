@@ -3,7 +3,7 @@ name: Build devops docs
 on:
   push:
      branches:
-       - main  # Set a branch to deploy
+       - main
   # pull_request:
   # on:
   workflow_dispatch:
