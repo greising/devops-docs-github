@@ -3,7 +3,7 @@ name: Build devops docs
 on:
   push:
      branches:
-       - main
+       - master
   # pull_request:
   # on:
   workflow_dispatch:
