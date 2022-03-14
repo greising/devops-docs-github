@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: '12.X'
 
-      - run: npm install
+      # - run: npm install # now we have the package-lock.json saved in master branch
 
       - name: Cache node dependencies
         uses: actions/cache@v2

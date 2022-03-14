@@ -1,4 +1,4 @@
-baseURL = "greising.github.io/devops-docs-github/"
+baseURL = "/devops-docs-github/"
 title = "DevOps Docs"
 
 # Language settings
